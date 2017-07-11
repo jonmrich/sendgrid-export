@@ -32,9 +32,10 @@ var result = "";
     var email = $(this).find("td.contact").find("span.email.email-link").text();
     valid = (typeof email !== 'null');
     var date = $(this).find("td.time").text();
+    var category = $(this).find("td.category").text();
     var type = $(this).find("td.type").find("span.name").text();
     if(valid){
-        result += email + "," + date + "," + type + "<br/>";
+        result += email + "," + date + "," + type + "," + category + "<br/>";
     }
   });
   writeConsole(result);
